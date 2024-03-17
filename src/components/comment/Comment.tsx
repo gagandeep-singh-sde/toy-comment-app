@@ -1,12 +1,14 @@
-import Avatar from "@/ui/avatar";
+"use client";
+import Action from "@/ui/action";
+import { MdCreate } from "react-icons/md";
 
 const Comment = () => {
+  const onClickHandler = () => {
+    console.log("Edit comment");
+  };
   return (
     <>
-      <Avatar
-        name="Gagandeep"
-        // profilePicture="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250"
-      />
+      <Action Icon={MdCreate} onClick={onClickHandler} />
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { User } from "react-feather";
+import { FiUser } from "react-icons/fi";
 import Image from "next/image";
 import { AvatarProps } from "./Avatar.d";
 
@@ -16,7 +16,7 @@ const Avatar = ({ profilePicture, name }: AvatarProps) => {
             className="rounded-2xl"
           />
         ) : (
-          <User width={18} height={18} className="pb-px" />
+          <FiUser width={18} height={18} className="pb-px" />
         )}
       </div>
       <div className="ml-2.5 text-xs">{name}</div>

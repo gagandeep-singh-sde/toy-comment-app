@@ -14,7 +14,7 @@ const Comment = ({ comment }: CommentProps) => {
   };
   return (
     <>
-      <div className="py-5 w-full max-w-lg">
+      <div className="py-5">
         <div className="flex items-center">
           <div className="flex w-full">
             <Avatar

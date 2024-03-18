@@ -19,7 +19,7 @@ const Avatar = ({ profilePicture, name }: AvatarProps) => {
           <FiUser width={18} height={18} className="pb-px" />
         )}
       </div>
-      <div className="ml-2.5 text-xs">{name}</div>
+      <div className="ml-2 text-xs">{name}</div>
     </div>
   );
 };

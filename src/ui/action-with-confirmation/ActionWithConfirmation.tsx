@@ -9,6 +9,7 @@ import { ActionWithConfirmationProps } from "./ActionWithConfirmation.d";
 const ActionWithConfirmation = ({
   Icon,
   ConfirmActionIcon,
+  ConfirmActionMessage,
   onClick,
 }: ActionWithConfirmationProps) => {
   const [confirmUiVisvible, setConfirmUiVisvible] = useState(false);
@@ -54,7 +55,8 @@ const ActionWithConfirmation = ({
           )}
           onClick={onClick}
           data-tooltip-id="confirm-delete"
-          data-tooltip-content="Confirm!"
+          data-tooltip-content={ConfirmActionMessage}
+          data-tooltip-place="right"
         >
           <ConfirmActionIcon />
           <Tooltip

@@ -1,19 +1,13 @@
 "use client";
-import ActionWithConfirmation from "@/ui/action-with-confirmation";
-import { FiTrash } from "react-icons/fi";
-import { FiTrash2 } from "react-icons/fi";
+import Button from "@/ui/button";
 
 const Comment = () => {
   const onClickHandler = () => {
-    console.log("Delete comment");
+    console.log("Clicked");
   };
   return (
     <>
-      <ActionWithConfirmation
-        Icon={FiTrash}
-        ConfirmActionIcon={FiTrash2}
-        onClick={onClickHandler}
-      />
+      <Button label={"Comment"} onClick={onClickHandler} />
     </>
   );
 };

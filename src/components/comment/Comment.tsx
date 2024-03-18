@@ -1,14 +1,19 @@
 "use client";
-import Action from "@/ui/action";
-import { MdCreate } from "react-icons/md";
+import ActionWithConfirmation from "@/ui/action-with-confirmation";
+import { FiTrash } from "react-icons/fi";
+import { FiTrash2 } from "react-icons/fi";
 
 const Comment = () => {
   const onClickHandler = () => {
-    console.log("Edit comment");
+    console.log("Delete comment");
   };
   return (
     <>
-      <Action Icon={MdCreate} onClick={onClickHandler} />
+      <ActionWithConfirmation
+        Icon={FiTrash}
+        ConfirmActionIcon={FiTrash2}
+        onClick={onClickHandler}
+      />
     </>
   );
 };

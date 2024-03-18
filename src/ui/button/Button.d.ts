@@ -1,14 +1,5 @@
-type BaseButtonProps = {
+export type ButtonProps = {
   label: string;
+  type?: "button" | "submit";
+  onClick?: () => void;
 };
-
-type ButtonProps = BaseButtonProps &
-  (
-    | {
-        type?: "button";
-        onClick: () => void;
-      }
-    | {
-        type: "submit";
-      }
-  );

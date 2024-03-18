@@ -3,6 +3,8 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 
+import { MdCancel } from "react-icons/md";
+
 import Button from "@/ui/button";
 import { CommentBoxProps } from "./commentBox.d";
 import Avatar from "@/ui/avatar";
@@ -16,7 +18,13 @@ const schema = z.object({
 
 export type FormFieldsType = z.infer<typeof schema>;
 
-const CommentBox = ({ buttonText, placeholder, onClick }: CommentBoxProps) => {
+const CommentBox = ({
+  buttonText,
+  placeholder,
+  onClick,
+  onCancel,
+  content,
+}: CommentBoxProps) => {
   const {
     register,
     handleSubmit,
@@ -31,22 +39,31 @@ const CommentBox = ({ buttonText, placeholder, onClick }: CommentBoxProps) => {
   };
   return (
     <div>
-      <div className="pt-5 flex items-start">
+      <div className="pt-5 relative w-full flex items-start">
         <Avatar profilePicture="https://avatar.iran.liara.run/public/4" />
-        <div className="ml-2 border border-neutral-300 rounded-lg">
-          <form className="flex" onSubmit={handleSubmit(submitHandler)}>
+        <div className="ml-2 w-full border border-neutral-300 rounded-lg">
+          <form className="flex w-full" onSubmit={handleSubmit(submitHandler)}>
             <textarea
-              className="p-3 resize-none bg-transparent focus:outline-none"
+              className="p-3 w-full resize-none bg-transparent focus:outline-none"
               {...register("comment")}
               placeholder={placeholder}
               rows={4}
-              cols={35}
-            />
-            <div className="self-end mb-3 mr-3">
+            >
+              {content}
+            </textarea>
+            <div className="self-end mb-3 mr-3 ml-3">
               <Button label={buttonText} type="submit" />
             </div>
           </form>
         </div>
+        {buttonText == "Edit" && (
+          <div
+            className="absolute right-0 m-3 text-neutral-500 cursor-pointer"
+            onClick={onCancel}
+          >
+            <MdCancel />
+          </div>
+        )}
       </div>
       {errors.comment && (
         <p className="text-red-500 text-sm ml-10 mt-2.5">

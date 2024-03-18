@@ -15,7 +15,7 @@ const CommentFeed = () => {
           <Comment key={comment.id} comment={comment} />
         ))}
       </div>
-      <div className="fixed bottom-0 pb-5 bg-white z-10">
+      <div className="fixed w-full max-w-lg bottom-0 pb-5 bg-white z-10">
         <CommentBox
           buttonText="Comment"
           placeholder="Add a comment"

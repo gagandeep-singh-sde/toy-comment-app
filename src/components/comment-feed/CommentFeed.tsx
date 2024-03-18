@@ -9,7 +9,7 @@ const CommentFeed = () => {
     console.log(data);
   };
   return (
-    <div className="w-full max-w-lg mx-3 divide-y divide-neutral-300">
+    <div className="w-full max-w-lg mx-auto divide-y divide-neutral-300">
       <div className="pb-40 divide-y divide-neutral-300">
         {mockComments.map((comment) => (
           <Comment key={comment.id} comment={comment} />

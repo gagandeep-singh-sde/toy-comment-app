@@ -2,6 +2,7 @@ import { useState } from "react";
 import clsx from "clsx";
 
 import { FiXCircle } from "react-icons/fi";
+import { Tooltip } from "react-tooltip";
 
 import { ActionWithConfirmationProps } from "./ActionWithConfirmation.d";
 
@@ -52,8 +53,14 @@ const ActionWithConfirmation = ({
             confirmUiVisvible && "duration-500 ease-in-out opacity-1"
           )}
           onClick={onClick}
+          data-tooltip-id="confirm-delete"
+          data-tooltip-content="Confirm!"
         >
           <ConfirmActionIcon />
+          <Tooltip
+            id="confirm-delete"
+            className="text-xs scale-75 -translate-x-3"
+          />
         </div>
       </div>
     </>

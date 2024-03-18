@@ -10,14 +10,18 @@ const CommentFeed = () => {
   };
   return (
     <div className="w-full max-w-lg mx-3 divide-y divide-neutral-300">
-      {mockComments.map((comment) => (
-        <Comment key={comment.id} comment={comment} />
-      ))}
-      <CommentBox
-        buttonText="Comment"
-        placeholder="Add a comment"
-        onClick={onClickHandler}
-      />
+      <div className="pb-40 divide-y divide-neutral-300">
+        {mockComments.map((comment) => (
+          <Comment key={comment.id} comment={comment} />
+        ))}
+      </div>
+      <div className="fixed bottom-0 pb-5 bg-white z-10">
+        <CommentBox
+          buttonText="Comment"
+          placeholder="Add a comment"
+          onClick={onClickHandler}
+        />
+      </div>
     </div>
   );
 };

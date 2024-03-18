@@ -38,4 +38,20 @@ export const mockComments: MockComment[] = [
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     createdAt: new Date("2024-02-12"),
   },
+  {
+    id: 5,
+    author: "Bella Khorrami",
+    authorImage: "",
+    content:
+      "Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat.",
+    createdAt: new Date("2024-02-11"),
+  },
+  {
+    id: 6,
+    author: "Russ Hanneman",
+    authorImage: "https://avatar.iran.liara.run/public/29",
+    content:
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    createdAt: new Date("2024-02-11"),
+  },
 ];

@@ -40,7 +40,7 @@ const CommentBox = ({ buttonText, placeholder, onClick }: CommentBoxProps) => {
               {...register("comment")}
               placeholder={placeholder}
               rows={4}
-              cols={36}
+              cols={35}
             />
             <div className="self-end mb-3 mr-3">
               <Button label={buttonText} type="submit" />

@@ -31,6 +31,7 @@ const CommentBox = ({
     formState: { errors, isSubmitting },
     reset,
   } = useForm<FormFieldsType>({
+    defaultValues: { comment: content },
     resolver: zodResolver(schema),
   });
   const submitHandler: SubmitHandler<FormFieldsType> = (
@@ -53,9 +54,7 @@ const CommentBox = ({
               {...register("comment")}
               placeholder={placeholder}
               rows={4}
-            >
-              {content}
-            </textarea>
+            />
             <div className="self-end mb-3 mr-3 ml-3">
               <Button label={buttonText} type="submit" />
             </div>

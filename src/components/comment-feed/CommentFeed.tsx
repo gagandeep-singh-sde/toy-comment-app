@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { v4 as uuidv4 } from "uuid";
 
@@ -29,7 +29,6 @@ const CommentFeed = () => {
   };
 
   const onEditComment = (id: string, data: FormFieldsType) => {
-    console.log(id, data);
     setComments(
       comments.map((comment) => {
         if (comment.id === id) {
@@ -43,10 +42,6 @@ const CommentFeed = () => {
   const onDeleteComment = (id: string) => {
     setComments(comments.filter((comment) => comment.id !== id));
   };
-
-  useEffect(() => {
-    console.log("=>", comments);
-  }, [comments]);
 
   return (
     <div className="mx-auto w-full max-w-lg divide-y divide-neutral-300">

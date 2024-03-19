@@ -20,12 +20,10 @@ const Comment = ({ comment, currentUser, onEdit, onDelete }: CommentProps) => {
   };
   const onActionWithConfirmationClick = (id: string) => {
     onDelete(id);
-    console.log(id);
   };
   const onEditClick = (id: string, data: FormFieldsType) => {
     setIsEditing((prev) => !prev);
     onEdit(id, data);
-    console.log(data);
   };
   const onCancel = () => {
     setIsEditing((prev) => !prev);

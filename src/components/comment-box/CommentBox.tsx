@@ -42,7 +42,7 @@ const CommentBox = ({
   };
   return (
     <div>
-      <div className="pt-5 mx-1 relative flex items-start">
+      <div className="pt-5 relative flex items-start">
         <Avatar profilePicture="https://avatar.iran.liara.run/public/4" />
         <div className="ml-2 flex flex-grow border border-neutral-300 rounded-lg">
           <form

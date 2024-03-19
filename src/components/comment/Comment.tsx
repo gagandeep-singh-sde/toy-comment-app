@@ -31,7 +31,7 @@ const Comment = ({ comment, currentUser, onEdit, onDelete }: CommentProps) => {
   return (
     <>
       {isEditing ? (
-        <div className="pb-5 mx-1">
+        <div className="pb-5">
           <CommentBox
             buttonText="Edit"
             placeholder=""
@@ -41,7 +41,7 @@ const Comment = ({ comment, currentUser, onEdit, onDelete }: CommentProps) => {
           />
         </div>
       ) : (
-        <div className="py-5 cursor-pointer mx-1">
+        <div className="py-5 cursor-pointer">
           <div className="flex items-center">
             <div className="flex w-full">
               <Avatar

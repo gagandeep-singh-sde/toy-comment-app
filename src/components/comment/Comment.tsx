@@ -29,7 +29,7 @@ const Comment = ({ comment }: CommentProps) => {
   return (
     <>
       {isEditing ? (
-        <div className="pb-5">
+        <div className="pb-5 mx-1">
           <CommentBox
             buttonText="Edit"
             placeholder=""
@@ -39,7 +39,7 @@ const Comment = ({ comment }: CommentProps) => {
           />
         </div>
       ) : (
-        <div className="py-5 cursor-pointer">
+        <div className="py-5 cursor-pointer mx-1">
           <div className="flex items-center">
             <div className="flex w-full">
               <Avatar

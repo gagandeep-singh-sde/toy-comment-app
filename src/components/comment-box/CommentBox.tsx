@@ -39,12 +39,15 @@ const CommentBox = ({
   };
   return (
     <div>
-      <div className="pt-5 relative w-full flex items-start">
+      <div className="pt-5 mx-1 relative flex items-start">
         <Avatar profilePicture="https://avatar.iran.liara.run/public/4" />
-        <div className="ml-2 w-full border border-neutral-300 rounded-lg">
-          <form className="flex w-full" onSubmit={handleSubmit(submitHandler)}>
+        <div className="ml-2 flex flex-grow border border-neutral-300 rounded-lg">
+          <form
+            className="flex flex-grow"
+            onSubmit={handleSubmit(submitHandler)}
+          >
             <textarea
-              className="p-3 w-full resize-none bg-transparent focus:outline-none"
+              className="p-3 flex-grow resize-none bg-transparent focus:outline-none"
               {...register("comment")}
               placeholder={placeholder}
               rows={4}

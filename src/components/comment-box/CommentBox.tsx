@@ -6,7 +6,7 @@ import { z } from "zod";
 import { MdCancel } from "react-icons/md";
 
 import Button from "@/ui/button";
-import { CommentBoxProps } from "./commentBox.d";
+import { CommentBoxProps } from "./CommentBox.d";
 import Avatar from "@/ui/avatar";
 
 const schema = z.object({

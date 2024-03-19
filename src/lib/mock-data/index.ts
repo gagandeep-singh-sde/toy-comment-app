@@ -1,5 +1,6 @@
 interface MockComment {
   id: number;
+  username: string;
   author: string;
   authorImage: string;
   content: string;
@@ -9,6 +10,7 @@ interface MockComment {
 export const mockComments: MockComment[] = [
   {
     id: 1,
+    username: "jp",
     author: "JP Lemieux",
     authorImage: "https://avatar.iran.liara.run/public/4",
     content: "Lorem ipsum dolor sit amet.",
@@ -16,6 +18,7 @@ export const mockComments: MockComment[] = [
   },
   {
     id: 2,
+    username: "bellaK",
     author: "Bella Khorrami",
     authorImage: "https://avatar.iran.liara.run/public/78",
     content:
@@ -24,6 +27,7 @@ export const mockComments: MockComment[] = [
   },
   {
     id: 3,
+    username: "mahdi",
     author: "Mahdi Dibaiee",
     authorImage: "https://avatar.iran.liara.run/public/20",
     content:
@@ -32,6 +36,7 @@ export const mockComments: MockComment[] = [
   },
   {
     id: 4,
+    username: "jape",
     author: "Jake Peralta",
     authorImage: "https://avatar.iran.liara.run/public/37",
     content:
@@ -40,6 +45,7 @@ export const mockComments: MockComment[] = [
   },
   {
     id: 5,
+    username: "bekh",
     author: "Bella Khorrami",
     authorImage: "",
     content:
@@ -48,6 +54,7 @@ export const mockComments: MockComment[] = [
   },
   {
     id: 6,
+    username: "ruha",
     author: "Russ Hanneman",
     authorImage: "https://avatar.iran.liara.run/public/29",
     content:

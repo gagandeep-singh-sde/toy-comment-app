@@ -48,7 +48,9 @@ const Comment = ({ comment }: CommentProps) => {
               />
             </div>
             <div className="flex w-full justify-end">
-              <p className="text-neutral-500 text-xs">15 minutes ago</p>
+              <p className="text-neutral-500 text-xs">
+                {comment.createdAt.getTime()}
+              </p>
             </div>
           </div>
           <div className="flex">

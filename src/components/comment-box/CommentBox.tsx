@@ -29,6 +29,7 @@ const CommentBox = ({
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
+    reset,
   } = useForm<FormFieldsType>({
     resolver: zodResolver(schema),
   });
@@ -36,6 +37,7 @@ const CommentBox = ({
     data: FormFieldsType
   ) => {
     onClick(data);
+    reset();
   };
   return (
     <div>

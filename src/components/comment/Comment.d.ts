@@ -1,9 +1,9 @@
+import type { MockComment } from "@/lib/mock-data";
+import type { FormFieldsType } from "@/components/comment-box";
+
 export type CommentProps = {
-  comment: {
-    id: number;
-    author: string;
-    authorImage: string;
-    content: string;
-    createdAt: Date;
-  };
+  currentUser: string;
+  comment: MockComment;
+  onEdit: (id: string, data: FormFieldsType) => void;
+  onDelete: (id: string) => void;
 };

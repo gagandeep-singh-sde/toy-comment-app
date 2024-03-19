@@ -1,5 +1,7 @@
-interface MockComment {
-  id: number;
+import { v4 as uuidv4 } from "uuid";
+
+export interface MockComment {
+  id: string;
   username: string;
   author: string;
   authorImage: string;
@@ -9,7 +11,7 @@ interface MockComment {
 
 export const mockComments: MockComment[] = [
   {
-    id: 1,
+    id: uuidv4(),
     username: "jp",
     author: "JP Lemieux",
     authorImage: "https://avatar.iran.liara.run/public/4",
@@ -17,7 +19,7 @@ export const mockComments: MockComment[] = [
     createdAt: new Date("2024-03-18"),
   },
   {
-    id: 2,
+    id: uuidv4(),
     username: "bellaK",
     author: "Bella Khorrami",
     authorImage: "https://avatar.iran.liara.run/public/78",
@@ -26,7 +28,7 @@ export const mockComments: MockComment[] = [
     createdAt: new Date("2024-03-17"),
   },
   {
-    id: 3,
+    id: uuidv4(),
     username: "mahdi",
     author: "Mahdi Dibaiee",
     authorImage: "https://avatar.iran.liara.run/public/20",
@@ -35,7 +37,7 @@ export const mockComments: MockComment[] = [
     createdAt: new Date("2024-03-01"),
   },
   {
-    id: 4,
+    id: uuidv4(),
     username: "jape",
     author: "Jake Peralta",
     authorImage: "https://avatar.iran.liara.run/public/37",
@@ -44,7 +46,7 @@ export const mockComments: MockComment[] = [
     createdAt: new Date("2024-02-12"),
   },
   {
-    id: 5,
+    id: uuidv4(),
     username: "bekh",
     author: "Bella Khorrami",
     authorImage: "",
@@ -53,7 +55,7 @@ export const mockComments: MockComment[] = [
     createdAt: new Date("2024-02-11"),
   },
   {
-    id: 6,
+    id: uuidv4(),
     username: "ruha",
     author: "Russ Hanneman",
     authorImage: "https://avatar.iran.liara.run/public/29",

@@ -9,19 +9,23 @@ import { FiTrash } from "react-icons/fi";
 import { FiTrash2 } from "react-icons/fi";
 import { MdCreate } from "react-icons/md";
 
-import { CommentProps } from "./Comment.d";
+import type { CommentProps } from "./Comment.d";
+import type { FormFieldsType } from "@/components/comment-box";
 import Action from "@/ui/action";
 
-const Comment = ({ comment }: CommentProps) => {
+const Comment = ({ comment, currentUser, onEdit, onDelete }: CommentProps) => {
   const [isEditing, setIsEditing] = useState(false);
   const onActionClick = () => {
     setIsEditing((prev) => !prev);
   };
-  const onActionWithConfirmationClick = () => {
-    console.log("Delete comment");
+  const onActionWithConfirmationClick = (id: string) => {
+    onDelete(id);
+    console.log(id);
   };
-  const onEdit = () => {
+  const onEditClick = (id: string, data: FormFieldsType) => {
     setIsEditing((prev) => !prev);
+    onEdit(id, data);
+    console.log(data);
   };
   const onCancel = () => {
     setIsEditing((prev) => !prev);
@@ -34,7 +38,7 @@ const Comment = ({ comment }: CommentProps) => {
             buttonText="Edit"
             placeholder=""
             content={comment.content}
-            onClick={onEdit}
+            onClick={(data) => onEditClick(comment.id, data)}
             onCancel={onCancel}
           />
         </div>
@@ -55,15 +59,17 @@ const Comment = ({ comment }: CommentProps) => {
           </div>
           <div className="flex">
             <p className="ml-10 w-full">{comment.content}</p>
-            <div className="flex justify-end">
-              <Action Icon={MdCreate} onClick={onActionClick} />
-              <ActionWithConfirmation
-                onClick={onActionWithConfirmationClick}
-                Icon={FiTrash}
-                ConfirmActionIcon={FiTrash2}
-                ConfirmActionMessage="Confirm!"
-              />
-            </div>
+            {comment.username === currentUser && (
+              <div className="flex justify-end">
+                <Action Icon={MdCreate} onClick={onActionClick} />
+                <ActionWithConfirmation
+                  onClick={() => onActionWithConfirmationClick(comment.id)}
+                  Icon={FiTrash}
+                  ConfirmActionIcon={FiTrash2}
+                  ConfirmActionMessage="Confirm!"
+                />
+              </div>
+            )}
           </div>
         </div>
       )}

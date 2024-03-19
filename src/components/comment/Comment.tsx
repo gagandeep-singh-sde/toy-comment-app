@@ -9,6 +9,8 @@ import { FiTrash } from "react-icons/fi";
 import { FiTrash2 } from "react-icons/fi";
 import { MdCreate } from "react-icons/md";
 
+import formatDate from "@/lib/date-parser";
+
 import type { CommentProps } from "./Comment.d";
 import type { FormFieldsType } from "@/components/comment-box";
 import Action from "@/ui/action";
@@ -51,7 +53,7 @@ const Comment = ({ comment, currentUser, onEdit, onDelete }: CommentProps) => {
             </div>
             <div className="flex w-full justify-end">
               <p className="text-neutral-500 text-xs">
-                {comment.createdAt.getTime()}
+                {formatDate(comment.createdAt)}
               </p>
             </div>
           </div>

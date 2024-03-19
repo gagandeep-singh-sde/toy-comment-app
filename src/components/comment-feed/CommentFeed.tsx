@@ -32,7 +32,7 @@ const CommentFeed = () => {
     setComments(
       comments.map((comment) => {
         if (comment.id === id) {
-          return { ...comment, content: data.comment };
+          return { ...comment, content: data.comment, createdAt: new Date() };
         }
         return comment;
       })

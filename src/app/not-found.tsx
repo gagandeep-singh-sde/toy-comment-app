@@ -10,7 +10,7 @@ const NotFound = () => {
           src="https://avatar.iran.liara.run/public/12"
           width={160}
           height={160}
-          alt={`${name}'s profile picture`}
+          alt="A guy here to help you find your way back home."
           className="rounded-2xl"
         />
         <p className="w-96 mx-auto">

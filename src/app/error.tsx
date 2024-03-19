@@ -10,7 +10,7 @@ const ErrorBoundary = ({ reset }: { reset: () => void }) => {
           src="https://avatar.iran.liara.run/public/27"
           width={160}
           height={160}
-          alt={`${name}'s profile picture`}
+          alt="A guy trying to resolve the issue."
           className="rounded-2xl"
         />
         <p className="w-96 mx-auto">
